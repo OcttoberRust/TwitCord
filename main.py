@@ -7,6 +7,7 @@ client = discordbot.discord.Client()
 
 client = discordbot.commands.Bot(command_prefix = '!') #put your own prefix here
 
+tapi = twitterbot.api
 
 """import discord
 import discord.ext
