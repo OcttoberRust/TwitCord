@@ -3,9 +3,16 @@ import time
 import discordbot
 import twitterbot
 
-client = discordbot.discord.Client()
+disclient = discordbot.discord.Client()
 
-client = discordbot.commands.Bot(command_prefix = '!') #put your own prefix here
+disclient = discordbot.commands.Bot(command_prefix = '!') #put your own prefix here
+
+tapi = twitterbot.api
+
+public_tweets = twitterbot.api.home_timeline()
+for tweet in public_tweets:
+    print(tweet.text)
+
 
 
 """import discord
@@ -60,6 +67,6 @@ async def on_message(message):
     await message.channel.send(encouragements)
 """
 
-client.run(os.getenv("TOKEN")) #get your bot token and create a key named `TOKEN` to the secrets panel then paste your bot token as the value. 
+disclient.run(os.getenv("DISCORD_TOKEN")) #get your bot token and create a key named `TOKEN` to the secrets panel then paste your bot token as the value. 
 #to keep your bot from shutting down use https://uptimerobot.com then create a https:// monitor and put the link to the website that appewars when you run this repl in the monitor and it will keep your bot alive by pinging the flask server
 #enjoy!
