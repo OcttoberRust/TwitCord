@@ -9,6 +9,10 @@ client = discordbot.commands.Bot(command_prefix = '!') #put your own prefix here
 
 tapi = twitterbot.api
 
+public_tweets = twitterbot.api.home_timeline()
+for tweet in public_tweets:
+    print(tweet.text)
+
 """import discord
 import discord.ext
 from discord.utils import get
