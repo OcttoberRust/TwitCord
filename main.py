@@ -18,8 +18,20 @@ for tweet in public_tweets:
     
 """
 
-print(tclient.get_user(username=""))
+certain_user_id = tclient.get_user(username="twitcordtestbot").data.id
 
+"""for info in certain_user:
+    print(info)
+"""
+print("\n\n\n\n")
+print(certain_user_id)
+
+users_following = tclient.get_users_following(id=certain_user_id)
+
+for user in users_following.data:
+  print(user.id)
+
+  
 
 """import discord
 import discord.ext
