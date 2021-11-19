@@ -7,12 +7,18 @@ disclient = discordbot.discord.Client()
 
 disclient = discordbot.commands.Bot(command_prefix = '!') #put your own prefix here
 
-tapi = twitterbot.api
+"""tapi = twitterbot.api"""
+tclient = twitterbot.tclient
 
-public_tweets = twitterbot.api.home_timeline()
+"""
+public_tweets = twitterbot.home_timeline()
+
 for tweet in public_tweets:
     print(tweet.text)
+    
+"""
 
+print(tclient.get_user(username=""))
 
 
 """import discord
